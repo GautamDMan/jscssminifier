@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.js.minifier</groupId>
+  <artifactId>jscsssminifier</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>JS CSS Minifier</name>
+  <!-- https://mvnrepository.com/artifact/com.google.javascript/closure-compiler -->
+  <dependencies>
+	<dependency>
+	    <groupId>com.google.javascript</groupId>
+	    <artifactId>closure-compiler</artifactId>
+	    <version>v20200628</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.yahoo.platform.yui/yuicompressor -->
+	<dependency>
+	    <groupId>com.yahoo.platform.yui</groupId>
+	    <artifactId>yuicompressor</artifactId>
+	    <version>2.4.8</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>2.7</version>
+	</dependency>
+	</dependencies>
+</project>
