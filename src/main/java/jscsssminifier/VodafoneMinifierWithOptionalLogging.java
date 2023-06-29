@@ -33,6 +33,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import com.yahoo.platform.yui.compressor.CssCompressor;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 
 public class VodafoneMinifierWithOptionalLogging {
 	private static JFrame frame_1;
@@ -115,30 +116,36 @@ public class VodafoneMinifierWithOptionalLogging {
 		ButtonGroup group = new ButtonGroup();
 		frame_1.getContentPane().setLayout(new BorderLayout(0, 0));
 
-		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		frame_1.getContentPane().add(tabbedPane);
 
 		JPanel Options = new JPanel();
 		tabbedPane.addTab("Options", null, Options, null);
 
 		JButton button1 = new JButton("select file to compile::");
+		button1.setFont(new Font("Segoe UI", Font.BOLD, 10));
 		button1.setToolTipText("select file to compile");
 		button1.setBackground(Color.GREEN);
 
 		JLabel lblNewLabel = new JLabel("Default input File ending::");
+		lblNewLabel.setFont(new Font("Segoe UI", Font.BOLD, 10));
 		lblNewLabel.setToolTipText("Default input File ending");
 
 		txtdev = new JTextField();
+		txtdev.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 11));
 		txtdev.setText("_dev");
 		txtdev.setColumns(10);
 
 		JLabel lblNewLabel_1 = new JLabel("Output Folder Name::");
+		lblNewLabel_1.setFont(new Font("Segoe UI", Font.BOLD, 10));
 		lblNewLabel_1.setToolTipText("Output Folder Name");
 
 		txtMinify = new JTextField();
+		txtMinify.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 11));
 		txtMinify.setText("custom");
 		txtMinify.setColumns(10);
 		final JRadioButton acvancedOpti = new JRadioButton("ADVANCED");
+		acvancedOpti.setFont(new Font("Segoe UI", Font.BOLD, 10));
 		acvancedOpti.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				x = "3";
@@ -148,11 +155,14 @@ public class VodafoneMinifierWithOptionalLogging {
 		group.add(acvancedOpti);
 
 		JButton button = new JButton("select input folder to compile:");
+		button.setFont(new Font("Segoe UI", Font.BOLD, 10));
 
 		button.setBackground(Color.GREEN);
-		JTextField button2 = new JTextField("output path here");
+		final JTextField button2 = new JTextField("output path here");
+		button2.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 11));
 
 		final JRadioButton simpleOpti = new JRadioButton("SIMPLE");
+		simpleOpti.setFont(new Font("Segoe UI", Font.BOLD, 10));
 		simpleOpti.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				x = "2";
@@ -162,6 +172,7 @@ public class VodafoneMinifierWithOptionalLogging {
 		group.add(simpleOpti);
 
 		final JRadioButton whiteSpace = new JRadioButton("WHITESPACE", true);
+		whiteSpace.setFont(new Font("Segoe UI", Font.BOLD, 10));
 		whiteSpace.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				x = "1";
@@ -170,16 +181,19 @@ public class VodafoneMinifierWithOptionalLogging {
 		group.add(whiteSpace);
 
 		JLabel lblNewLabel_3 = new JLabel("Output Path Below::");
+		lblNewLabel_3.setFont(new Font("Segoe UI", Font.BOLD, 10));
 
 		JLabel lblGitCommitMessage = new JLabel("GIT Commit Message (CR)::");
+		lblGitCommitMessage.setFont(new Font("Segoe UI", Font.BOLD, 10));
 
 		CommitMessage = new JTextField();
 		CommitMessage.setColumns(10);
 		CommitMessage.setEnabled(false);
 
 		JLabel lblBeautify = new JLabel("Beautify:: ");
+		lblBeautify.setFont(new Font("Segoe UI", Font.BOLD, 10));
 
-		JCheckBox isBeautify = new JCheckBox("");
+		final JCheckBox isBeautify = new JCheckBox("");
 		isBeautify.setSelected(beaut);
 		isBeautify.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
@@ -192,7 +206,7 @@ public class VodafoneMinifierWithOptionalLogging {
 			}
 		});
 
-		JCheckBox toLogcheckbox = new JCheckBox("");
+		final JCheckBox toLogcheckbox = new JCheckBox("");
 		toLogcheckbox.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				if (toLogcheckbox.isSelected() == true) {
@@ -206,6 +220,7 @@ public class VodafoneMinifierWithOptionalLogging {
 		});
 
 		JLabel lblNewLabel_2 = new JLabel("Log::");
+		lblNewLabel_2.setFont(new Font("Segoe UI", Font.BOLD, 10));
 		GroupLayout gl_Options = new GroupLayout(Options);
 		gl_Options.setHorizontalGroup(gl_Options.createParallelGroup(Alignment.LEADING).addGroup(gl_Options
 				.createSequentialGroup().addGap(69)
@@ -281,6 +296,7 @@ public class VodafoneMinifierWithOptionalLogging {
 				JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 
 		final JTextArea txt = new JTextArea();
+		txt.setFont(new Font("Cascadia Mono", Font.PLAIN, 14));
 		txt.setEnabled(true);
 		txt.setEditable(false);
 		scroll.setViewportView(txt);
